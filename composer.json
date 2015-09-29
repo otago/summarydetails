@@ -1,0 +1,17 @@
+{
+	"name": "otago/summarydetails",
+	"description": "html5 summary details",
+	"type": "silverstripe-module",
+	"homepage": "https://github.com/otago/summarydetails",
+	"keywords": ["silverstripe", "html5", "summary", "details"],
+	"license": "BSD-3-Clause",
+	"authors": [
+		{"name": "Torleif","email": "torleifw@op.ac.nz"}
+	],
+	"support": {
+		"issues": "https://github.com/otago/summarydetails/issues"
+	},
+	"require": {
+		"silverstripe/framework": "~3.1"
+	}
+}

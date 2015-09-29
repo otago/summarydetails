@@ -42,13 +42,13 @@
 			ed.addButton('ssdetails', {
 				title: 'Insert an expandable details and summary element',
 				cmd: 'mceInsertDetails',
-				image: url + '/img/ssdetails.png'
+				image: url + '/../images/ssdetails.png'
 			});
 			// Register buttons
 			ed.addButton('ssremovedetails', {
 				title: 'Remote details tag',
 				cmd: 'mceRemoveDetails',
-				image: url + '/img/ssclose.png'
+				image: url + '/../images/ssclose.png'
 			});
 
 			// Disable link button when no link is selected

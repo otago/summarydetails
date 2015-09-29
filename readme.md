@@ -9,8 +9,8 @@ the summary tag. Avoiding such headaches as double embedding, rich text formatti
 ![details summary in the CMS]( https://raw.githubusercontent.com/otago/summarydetails/master/images/screen2.png)
 
 ## Installation
-You can install this module via composer if you’re using SilverStripe: ```Composer 
-require Otago/ssdetails```.
+You can install this module via composer if you’re using SilverStripe: ```composer 
+require otago/summarydetails```.
 
 Non SilverStripe tinyMCE users can download the archive and copy the files locally. 
 You’ll then need to edit **ssdetails/tinymce_ssdetails/details.htm** and point 

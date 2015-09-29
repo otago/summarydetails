@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Insert details summary tag</title>
+		<script type="text/javascript" src="../../../../framework/thirdparty/tinymce/tiny_mce_popup.js"></script>
+		<script type="text/javascript" src="../../../../framework/thirdparty/tinymce/tiny_mce_src.js"></script>
+		<script type="text/javascript" src="js/details.js"></script>
+		<style>
+			dd {
+				margin: 0;
+			}
+			.summary input {
+				width: 100%;
+			}
+			.summary .summaryDetails {
+				display: block;
+				overflow: hidden;
+				padding: 0 2px 0 100px;
+			}
+			.summary #DetailsClassView {
+				float: left;
+				position: absolute;
+			}
+			.summary #DetailsClassView select {
+				width:96px;
+			}
+		</style>
+	</head>
+	<body id="detailscontainer" style="display:none">
+		<form onsubmit="return InsertDetailsDialog.insert();" action="#">
+			<dl>
+				<dt>Summary Content</dt>
+				<dd class="summary">
+					<span id="DetailsClassView"></span>
+					<span class="summaryDetails"><input type="text" name="summary" id="Summary"/></span>
+				</dd>
+				<dt>Details content</dt>
+				<dd><textarea id="DetailsTextArea"></textarea></dd>
+			</dl>
+
+			<div class="mceActionPanel">
+				<input type="submit" id="insert" name="insert" value="{#insert}" />
+				<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+			</div>
+		</form>
+	</body>
+</html>

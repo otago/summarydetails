@@ -63,7 +63,7 @@
 				longname: 'ssdetails',
 				author: 'Torleif West',
 				authorurl: 'http://op.ac.nz/',
-				infourl: 'http://me.org.nz/myplugin/',
+				infourl: 'https://github.com/otago/summarydetails',
 				version: "1.0"
 			};
 		}

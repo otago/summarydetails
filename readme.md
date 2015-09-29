@@ -1,20 +1,20 @@
 # Summary Details support for tinyMCE
 
-This tinyMCE 3.x plugin allows for rich editing of the HTML5 <summary> <details> 
+This tinyMCE 3.x plugin allows for rich editing of the HTML5 \<summary\> \<details\> 
 tag; enabling you to create, edit, and delete summary tags in an easy to use
  popup. It also allows (through an optional setting) icons to be used inside 
 the summary tag. Avoiding such headaches as double embedding, rich text formatting
  mistakes, and tag soup.
 
 ## Installation
-You can install this module via composer if you’re using SilverStripe: ```Composer 
+You can install this module via composer if youâ€™re using SilverStripe: ```Composer 
 require Otago/ssdetails```.
 
 Non SilverStripe tinyMCE users can download the archive and copy the files locally. 
-You’ll then need to edit **ssdetails/tinymce_ssdetails/details.htm** and point 
+Youâ€™ll then need to edit **ssdetails/tinymce_ssdetails/details.htm** and point 
 tiny_mce_popup.js & editor_plugin_src.js to your tinyMCE locations.
 
-After that you’ll need to tell SilverStripe to load the files, by adding the 
+After that youâ€™ll need to tell SilverStripe to load the files, by adding the 
 following to your **_config.php**:
 
 ```HtmlEditorConfig::get('cwp')
@@ -30,7 +30,7 @@ following to your **_config.php**:
 		));
 ```
 
-Note the custom details_icons_class option, you’ll want to leave this empty or
+Note the custom details_icons_class option, youâ€™ll want to leave this empty or
 modify with your local icon set.
 
 Again, non SilverStripe users will have to load the plugin and add the buttons to a line manually.

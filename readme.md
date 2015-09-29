@@ -5,6 +5,8 @@ tag; enabling you to create, edit, and delete summary tags in an easy to use
  popup. It also allows (through an optional setting) icons to be used inside 
 the summary tag. Avoiding such headaches as double embedding, rich text formatting
  mistakes, and tag soup.
+ 
+![details summary in the CMS]( https://raw.githubusercontent.com/otago/summarydetails/master/images/screen2.png)
 
 ## Installation
 You can install this module via composer if you’re using SilverStripe: ```Composer 
@@ -36,6 +38,8 @@ modify with your local icon set.
 Again, non SilverStripe users will have to load the plugin and add the buttons to a line manually.
 
 ## Usage
+
+![buttons in the CMS]( https://raw.githubusercontent.com/otago/summarydetails/master/images/screen1.png)
 
 There should be two icons added to your TinyMCE instance, a modify, and remove button:
 

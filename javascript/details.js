@@ -12,6 +12,7 @@ tinyMCEPopup.onInit.add(function () {
 	});
 });
 
+var iconmapvalues = new Array();
 
 /**
  * populate the dropdown of span icons
@@ -37,6 +38,12 @@ function renderClassListHTML() {
 		iconvalues = iconmap[i].split(",");
 		classname = iconvalues[0].substring(1);
 		classvalue = iconvalues[1];
+
+		if (iconvalues.length > 2) {
+			iconmapvalues[i] = iconvalues[2];
+		} else {
+			iconmapvalues[i] = null;
+		}
 
 		html += '<option value="' + classname + '">' + classvalue + '</option>';
 	}
@@ -101,6 +108,8 @@ var InsertDetailsDialog = {
 	insert: function () {
 		var mycontent = tinyMCE.get('DetailsTextArea').getContent();
 		var mysummary = document.getElementById('Summary').value;
+		var mysummaryclass = "";
+
 		if (!mycontent) { // having nothing will make it hard to modify things
 			mycontent = " .. ";
 		}
@@ -108,19 +117,25 @@ var InsertDetailsDialog = {
 		// if you selected an icon
 		var e = document.getElementById("IconName");
 		if (e && e.options[e.selectedIndex].value) {
-			mysummary = '<span class="' + e.options[e.selectedIndex].value +
+			myclass = e.options[e.selectedIndex].value;
+			mysummary = '<span class="' + myclass +
 					'" aria-hidden="true">&nbsp;</span>' + mysummary;
+
+			// -1 because of the detault option
+			if (iconmapvalues[e.selectedIndex - 1]) {
+				mysummaryclass = ' class="' + iconmapvalues[e.selectedIndex - 1] + '"';
+			}
 		}
 
 		if (this.selectedSummary) {
 			// updating an existing summary tag
-			contentcomplete = '<summary>' + mysummary + '</summary>' + mycontent;
+			contentcomplete = '<summary' + mysummaryclass + '>' + mysummary + '</summary>' + mycontent;
 			this.selectedSummary.innerHTML = contentcomplete;
 
 			tinyMCEPopup.close();
 		} else {
 			// inserting a new tag
-			contentcomplete = '<div><details><summary>' + mysummary + '</summary>' + mycontent + '</details></div>';
+			contentcomplete = '<div><details><summary' + mysummaryclass + '>' + mysummary + '</summary>' + mycontent + '</details></div>';
 			tinyMCEPopup.editor.execCommand('mceInsertContent', false, contentcomplete);
 			tinyMCEPopup.close();
 		}

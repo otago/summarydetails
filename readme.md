@@ -25,6 +25,8 @@ following to your **_config.php**:
 		->setOptions(array(
 			'details_icons_class' =>
 			// an array of icons to use for the summary tags. [classname, class title],[...etc]
+			// an optional third value can be used for the summary class
+			// the first array item must be unique
 			'[icon-Plus,icon-Plus],' .
 			'[icon-Plus smallerPlusMinusIcon, icon-Plus indent],' .
 			'[icon-Plus2, icon-Plus 2],' .
